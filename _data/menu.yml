@@ -1,8 +1,8 @@
-- text: About Us
+- text: About
   url: /about/
 - text: Services
   url: /services/
 - text: Blog
-  url: /Blog/
+  url: /blog/
 - text: Contact
   url: /contact/

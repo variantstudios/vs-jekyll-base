@@ -1,14 +1,9 @@
 ---
-title: About
+title: Services
 description: This is just a sample general page.
-permalink:  /about/
+permalink:  /services/
 layout: page
 ---
-
-*Lorem* markdownum iacet figurae, *fert* heros, stetit generis! Vel *vagus sua*
-alvum ab rexit: inclinatoque callo ad condita valido.
-
-## Traxit fera fratris Horae ibis hic etiam
 
 Triticeas premente altum eget rediere *limite*. Non orientis hunc, surgunt
 vocem: [ac](http://www.googel.com) cadit quod, Boebes superat! Ut
