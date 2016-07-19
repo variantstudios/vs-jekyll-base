@@ -1,4 +1,4 @@
-# Variant Studios - Jekyll base
+# Jekyll Base
 This is a base setup for Jekyll powered static generated websites. Some of the features included are specific for the CloudCannon CMS.
 
 # Get your local environment setup on OSX
