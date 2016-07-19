@@ -1,0 +1,9 @@
+fieldset {
+  border-radius: 3px;
+  padding: 1em 1.5em;
+  .fieldset-legend {
+    a {
+      text-decoration: none;
+    }
+  }
+}

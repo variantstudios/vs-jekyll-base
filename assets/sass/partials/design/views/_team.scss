@@ -1,0 +1,37 @@
+.team-wrap {
+  margin-top: 1em;
+  .team-member {
+    margin-bottom: 1em;
+    img {
+      width: 100%;
+      margin-bottom: .5em;
+    }
+    header {
+      border-bottom: 1px solid #e2e2e2;
+      padding-bottom: .5em;
+      margin-bottom: .5em;
+      h4 {
+        margin: 0 0 5px;
+      }
+      .team-title {
+        font-style: italic;
+      }
+    }
+    p {
+      margin-bottom: .5em;
+    }
+    @include breakpoint($tablet, $no-query: '.no-mq') {
+      @include clearfix;
+      img {
+        @include grid-span(3, 1);
+      }
+      .team-right {
+        @include grid-span(9, 4);
+      }
+      .team-title {
+        float: right;
+        margin-top: -30px;
+      }
+    }
+  }
+}

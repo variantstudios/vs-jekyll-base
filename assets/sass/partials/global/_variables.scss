@@ -1,0 +1,60 @@
+// Sizes
+$large: 150%;
+$normal: 100%;
+$small: 80%;
+$rem: 16px;
+
+// Colors
+// Sites Main Colors
+$color-one: #26ABE2;
+$color-two: #135571;
+$color-three: #2B2E31;
+$color-four: #F5F5F5;
+
+// Regions - Use Site Main Colors variables for these if they fit
+$nav-bg: #fff;
+$site-bg: #fff;
+$main-bg: #fff;
+$footer-bg: #fff;
+
+// Typography
+$body-copy-color: #010101;
+$heading-color	: white;
+$link           : $color-one;
+$visited        : $link;
+$hover          : $link;
+
+/* validation Colors */
+$error: #E84141; // Red
+$valid: #2D9E59; // Green
+$warning: #FCD156; // Yellow
+$focus: #84D097; // Green
+
+// Misc
+$white: #fff;
+$black: #000;
+$table-row-odd: #F7F7F7;
+$table-row-even: #fff;
+$selection-bg   : #66B360;
+$selection      : $white;
+$inherit: inherit;
+
+// Layout Settings
+@include sgs-change('debug', true);
+@include add-grid(3);
+@include add-grid(12 at 768px);
+@include add-gutter(.1);
+@include add-gutter(1/3 at 768px);
+
+//Layout Variables
+$container_width: 1200px;
+$phone: 0 959px;
+$phone-lg: 500px 767px;
+$tablet-down: 0 979px;
+$tablet: 960px;
+$desktop: 980px;
+$lg-desktop: 1200px;
+$no-query: 959px, 'no-query' '.no-mq';
+$breakpoint-no-query-fallbacks: true;
+$breakpoint-to-ems: true;
+$breakpoints: '';

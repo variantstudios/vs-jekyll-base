@@ -1,0 +1,29 @@
+html {
+	box-sizing: border-box;
+  height: 100%;
+	body {
+    margin: 0;
+	  height: 100%;
+    background: $site-bg;
+    overflow-x: hidden;
+	}
+}
+*, *:before, *:after { box-sizing: inherit; }
+.wrap {
+  @include clearfix;
+  max-width: $container_width;
+  margin: 0 auto;
+	img {
+		vertical-align: middle;
+	}
+}
+.site-wrapper {
+  margin: 1em auto;
+  max-width: $container_width;
+  @include breakpoint($tablet, $no-query: ".no-mq") {
+    //margin: 6em auto 1em;
+  }
+}
+main, header, footer, section, aside {
+	display: block;
+}

@@ -1,0 +1,29 @@
+.header-wrapper {
+
+}
+
+.nav-header {
+  z-index: 1;
+  @include breakpoint($tablet, $no-query: ".no-mq") {
+    float: none;
+    top: 0;
+    padding: 0 5em;
+    transition: top .5s ease-in-out;
+    text-align: center;
+  }
+}
+.logo {
+  text-align: center;
+  padding: 1em;
+  @include breakpoint($tablet, $no-query: ".no-mq") {
+      @include grid-span(4,1,$gutter:0);
+      padding-top: 0;
+  }
+}
+.main-nav {
+  @include breakpoint($tablet, $no-query: ".no-mq") {
+    @include grid-span(8,5);
+    height: 88px;
+    margin-top: 1em;
+  }
+}

@@ -1,0 +1,43 @@
+<aside class="sidebar">
+  {% if page.path contains 'project' %}
+    <article class="project-block editable">
+      <h4>View Projects:</h4>
+      <ul>
+        {% for item in site.data.project_categories %}
+        <li><a href="{{ item.permalink }}">{{ item.title }}</a></li>
+        {% endfor %}
+        <li><a href="/projects/">Return to All Projects</a></li>
+      </ul>
+    </article>
+    {% comment %}
+      {% if page.partners %}
+        <article class="partner-block">
+          <h4>Partners:</h4>
+          <div class="partners">
+            {% for item in page.partners %}
+            <a href="{{ item.url }}" class="partner-link"><img src="{{ item.logo_path }}" alt="Partner Logo"></a>
+            {% endfor %}
+          </div>
+        </article>
+      {% endif %}
+    {% endcomment %}
+  {% else if page.path contains 'about' %}
+    <article class="about-block">
+      <h4>About:</h4>
+      <ul>
+        {% for item in site.data.about_menu %}
+          <li><a href="{{ item.permalink }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </article>
+    <article class="partner-block">
+      <h4>Partners:</h4>
+      <div class="partners">
+        {% assign items = site.data.partners | sort: 'weight' %}
+        {% for item in items %}
+          <a href="{{ item.url }}" class="partner-link"><img src="{{ item.logo_path }}" alt="Partner Logo" itemprop="image"></a>
+        {% endfor %}
+      </div>
+    </article>
+  {% endif %}
+</aside>

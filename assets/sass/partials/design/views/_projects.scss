@@ -1,0 +1,132 @@
+.project-selection {
+  margin-top: 1em;
+  .project {
+    margin-bottom: 1em;
+    img {
+      width: 100%;
+      margin-bottom: .5em;
+    }
+    header {
+      border-bottom: 1px solid #e2e2e2;
+      padding-bottom: .5em;
+      margin-bottom: .5em;
+      h4 {
+        margin: 0 0 5px;
+      }
+      .proj-location {
+        font-style: italic;
+      }
+    }
+    p {
+      margin-bottom: .5em;
+    }
+    .proj-link {
+      border-radius: 3px;
+      background: $color-one;
+      transition: background .2s ease-in;
+      float: right;
+      padding: 5px 8px;
+      margin-bottom: 1em;
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+      &:hover {
+        background: darken($color-one, 5%);
+        a {
+          color: $white;
+        }
+      }
+    }
+    // @include breakpoint($tablet-down, $no-query: '.no-mq') {
+    //   @include clearfix;
+    //   img {
+    //     @include grid-span(6, 1);
+    //   }
+    //   header {
+    //     @include grid-span(6, 7);
+    //   }
+    // }
+    @include breakpoint($tablet, $no-query: '.no-mq') {
+      @include clearfix;
+      img {
+        @include grid-span(3, 1);
+      }
+      .project-right {
+        @include grid-span(9, 4);
+      }
+      .proj-location {
+        float: right;
+        margin-top: -30px;
+      }
+    }
+  }
+}
+.project {
+  header {
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    h1 {
+      margin: .2em 0;
+    }
+    img {
+      box-shadow: 0 5px 10px rgba($black, .3);
+    }
+    .proj-subtitle {
+      list-style: none;
+      font-size: 0;
+      padding: 0;
+      text-align: center;
+      li {
+        display: inline-block;
+        font-size: 1rem;
+        padding: 5px;
+      }
+    }
+  }
+  footer {
+    .proj-gallery {
+      figure {
+        width: 185px;
+        height: 185px;
+        overflow: hidden;
+        box-shadow: 1px 2px 4px rgba($black, .3);
+        margin: 0 1em 1em 0;
+        display: inline-block;
+        transition: box-shadow .2s ease-in;
+        img {
+          height: 100%;
+          object-fit: cover;
+          background: #e4e4e4;
+          transition: height .5s ease-in-out;
+          padding: 0;
+        }
+        &:hover {
+          box-shadow: 2px 4px 10px rgba($black, .3);
+          img {
+            height: 105%;
+          }
+        }
+      }
+    }
+    .testimonial {
+      .testimonial-text {
+        font-style: italic;
+      }
+      .testimonial-author {
+        font-style: italic;
+        font-weight: bold;
+      }
+    }
+    @include breakpoint($tablet, $no-query: '.no-mq') {
+      @include clearfix;
+      .proj-gallery {
+        @include grid-span(6, 1);
+      }
+      .testimonial {
+        @include grid-span(6, 7);
+      }
+    }
+  }
+}

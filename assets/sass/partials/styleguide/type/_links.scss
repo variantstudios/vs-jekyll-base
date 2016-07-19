@@ -1,0 +1,37 @@
+a {
+  color: $link;
+  &:hover {
+    color: $hover;
+  }
+  &:visited {
+    color: $visited;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    text-decoration: none;
+  }
+}
+
+
+div.btn {
+  display: inline-block;
+  a {
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    @include btn($color-one, #fff, darken($color-one, 5%), 2px, 95%);
+    font-family: $heading-font-family;
+    border-left:  solid 4px lighten($color-one, 10%);
+    border-top:  solid 4px lighten($color-one, 15%);
+    border-right:  solid 4px darken($color-one, 10%);
+    border-bottom:  solid 4px darken($color-one, 15%);
+    @include trans(all, linear, .2s);
+    &:hover {
+      margin-top: -0.15em;
+      margin: -0.15em 0 0.15em;
+    }
+  }
+}

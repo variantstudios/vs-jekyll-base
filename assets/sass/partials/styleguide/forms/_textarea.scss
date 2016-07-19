@@ -1,0 +1,14 @@
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .5em;
+  font-size: 100%;
+  border: 1px solid #D3D3D3;
+  border-radius: 3px;
+  font-family: $font-family;
+  &:active, &:focus {
+    border: 1px solid $color-one;
+    box-shadow: none;
+    outline: none;
+  }
+}

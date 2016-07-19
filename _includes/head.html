@@ -1,0 +1,33 @@
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9"><![endif]-->
+	<link rel="canonical" href="{{ page.url | prepend:site.url }}">
+	<link rel="shortlink" href="{{ page.url | prepend:site.url }}">
+	<meta name="robots" content="follow, index">
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<!-- Open Graph -->
+	<meta property="og:url" content="{{ page.url | prepend:site.url }}">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/assets/css/style.css" media="screen">
+	<link rel="stylesheet" href="/assets/css/print.css"  media="print">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script>window.Modernizr || document.write('<script src="/assets/js/prod/modernizr-2.8.3.min.js"><\/script>')</script>
+
+	{% if site.typekit %}
+	<script src="https://use.typekit.net/{{ site.typekit }}.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	{% endif %}
+
+	<!-- Apple Touch, Fav Icon, and Windows Tile -->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	<!-- HTML 5 Shiv -->
+	<!--[if lt IE 9]> <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script> <![endif]-->
+</head>

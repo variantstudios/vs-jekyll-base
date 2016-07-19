@@ -1,0 +1,66 @@
+@mixin list-inline {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0 1em;
+}
+
+@mixin hide-text {
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+@mixin text-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-text-shadow:inset $top $left $blur $color;
+    -moz-text-shadow:inset $top $left $blur $color;
+    text-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-text-shadow: $top $left $blur $color;
+    -moz-text-shadow: $top $left $blur $color;
+    text-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin grad($from, $to, $stop: 100%) {
+  background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $from), color-stop($stop, $to));
+  background-image: -webkit-linear-gradient(top, $from 0%, $to $stop);
+  background: -ms-linear-gradient(top, $from 0%, $to $stop);
+  background: linear-gradient(to bottom, $from 0%, $to $stop);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+}
+
+
+@mixin btn($bg, $color, $border, $radius, $size) {
+  background-color: $bg;
+  border: 1px solid $border;
+  border-radius: $radius;
+  color: $color;
+  cursor: pointer;
+  padding: .5em 1.25em;
+  font-size: $size;
+  &:hover {
+    background-color: darken($bg, 2%);
+  }
+}
+
+@mixin trans($element, $effect, $duration) {
+  -webkit-transition: $element $effect $duration;
+  -moz-transition: $element $effect $duration;
+  -o-transition: $element $effect $duration;
+  transition: $element $effect $duration;
+}
