@@ -1,45 +1,30 @@
-# Site settings
-title:
-email:
-description:
-baseurl:  # the subpath of your site, e.g. /blog/
-url:  # the base hostname & protocol for your site
-#timezone: America/Denver - Don't set for CloudCannon...for reasons.
-version: "3.0.3" # the version of jekyll
-author.name:
-author.email:
-
-# Gems for plugins
-gems:
-  - jekyll-paginate # Needed to add paginate on Jekyll ver 3+
-  - jekyll-sitemap # Simple jekyll plugin that creates a sitemap.xml file and you can exclude files by adding 'sitemap:false' to the frontmatter of any file(s).
-
- # Permalinks
-# permalink: /blog/:year-:month-:day/:title - You can set this IF you are NOT using 'jekyll-paginate'
-permalink: pretty
-
-# Pagination
-paginate: 10
-# paginate_path: "/blog/page:num/" - set a nice path for paginate
-
-#Collections
+---
+title: Vs Jekyll Base
+timezone: UTC
 collections:
-  # example:
-  #   output: true
-  #   permalink: /example/:title/
-
-
-# typekit - Because we all need nice type faces.
-typekit:
-
-# Hardcoded Options - Client can't change these option values in CloudCannon
-# option_examples:
-#   - one
-#   - two
-#   - three
-#   - four
-
-# Google Analytics - What site isn't using it?!
-# google_analytics_tracking_id: "UA-XXXXXXXX-XX
-
-exclude: ["vendor","node_modules","package.json","Gemfile","gulpfile.js","*.scss"]
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: 
+description: 
+baseurl: 
+url: 
+version: 3.0.3
+author.name: 
+author.email: 
+gems:
+- jekyll-paginate
+- jekyll-sitemap
+permalink: pretty
+paginate: 10
+typekit: 
+exclude:
+- vendor
+- node_modules
+- package.json
+- Gemfile
+- gulpfile.js
+- "*.scss"

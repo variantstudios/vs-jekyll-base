@@ -1,7 +1,7 @@
 ---
 title: Services
+permalink: "/services/"
 description: This is just a sample general page.
-permalink:  /services/
 layout: page
 ---
 

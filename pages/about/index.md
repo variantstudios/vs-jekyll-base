@@ -1,7 +1,7 @@
 ---
 title: About
+permalink: "/about/"
 description: This is just a sample general page.
-permalink:  /about/
 layout: page
 ---
 

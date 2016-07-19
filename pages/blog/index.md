@@ -1,9 +1,10 @@
 ---
 title: Blog
+permalink: "/blog/"
 description: This is just a sample blog.
-permalink:  /blog/
 layout: page
 ---
+
 Perlucentibus ture fameque, pectora non neque percutit caelo tempora additur et
 posset cuius. Homines abiit, tempora tenus addere si famem ridet hic tanti
 maturus ille pascere *efflant* color. Carcere corpora undas; neve iugulum
