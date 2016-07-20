@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+<h3>Our team</h3>
+{% assign items = site.data.team | sort: 'weight' %}
+{% for item in items %}
+  {% if item.image_path %}
+    <img src="{{ item.image_path }}" alt="{{ item.name }}">
+  {% endif %}
+  <h4>{{ item.name }}</h4>
+  <p>{{ item.bio }}</p>
+{% endfor %}
