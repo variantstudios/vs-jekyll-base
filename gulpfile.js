@@ -7,7 +7,7 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync'),
   sass = require('gulp-sass'),
   compass = require('gulp-compass'),
-  minifyCSS = require('gulp-minify-css'),
+  cleanCSS = require('gulp-clean-css'),
   prefix = require('gulp-autoprefixer'),
   cp = require('child_process'),
   uglify = require('gulp-uglify'),
@@ -91,12 +91,18 @@ gulp.task('compass', function() {
     .pipe(prefix({
       browsers: ['last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
     }))
-    .pipe(minifyCSS())
     .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
     .pipe(gulp.dest('_site/assets/css'));
+});
+
+ 
+gulp.task('minify-css', function() {
+  return gulp.src('/assets/css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist'));
 });
 
 
