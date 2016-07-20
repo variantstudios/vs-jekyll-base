@@ -1,29 +1,10 @@
 .wrap {
+  @include clearfix;
   max-width: $container_width;
   margin: 0 auto;
 }
-.content-wrap { @include clearfix; }
-.page-header-wrapper {
-  width: 100%;
-}
-.default-content-wrapper {
-  @include breakpoint($tablet, $no-query: '.no-mq') {
-  }
-}
-.page-header {
-  @include breakpoint($tablet, $no-query: '.no-mq') {
-    @include grid-span(12, 1);
-  }
-}
+
+
 main {
   @include clearfix;
-  @include breakpoint($tablet, $no-query: '.no-mq') {
-    //padding: 2em;
-    .content-wrapper.partial-width {
-      @include grid-span(9, 1);
-    }
-    .sidebar {
-      @include grid-span(3, 10);
-    }
-  }
 }

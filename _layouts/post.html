@@ -2,12 +2,13 @@
 layout: default
 ---
 
-<div class="post">
+<main>
+  <section class="wrap">
 
   <header class="">
-    <h1 class="">{{ page.title }}</h1>
-    <p class="">{{ page.date | date: "%b %-d, %Y" }}</p>
-    <p class="">{% include reading-time.html %}</p>
+    <h1 class="pagetitle">{{ page.title }}</h1>
+    <p class="post-date">{{ page.date | date: "%b %-d, %Y" }}</p>
+    <p class="reading-time">{% include reading-time.html %}</p>
   </header>
 
   <article class="post-content">
@@ -23,5 +24,8 @@ layout: default
     {% endif %}
   </nav><!-- /.pagination -->
 
-{% include comments.html %}
-</div>
+  {% include comments.html %}
+
+  </section>
+</main>
+

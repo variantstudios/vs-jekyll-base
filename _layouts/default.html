@@ -6,13 +6,20 @@
 {% include head.html %}
 <body>
 	{% include browserupgrade.html %}
-  <div class="wrapper header-wrapper clearfix">
+
+  <div class="header-wrapper clearfix">
 	  {% include header.html %}
   </div>
-  <div class="site-wrapper default-content-wrapper clearfix">
+
+  <div class="main-wrapper clearfix">
 	  {{ content }}
   </div>
-	{% include footer.html %}
+  
+  <div class="footer-wrapper clearfix">
+  	{% include footer.html %}
+  </div>
+
 	{% include scripts.html %}
 </body>
+
 </html>
