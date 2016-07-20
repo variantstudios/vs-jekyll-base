@@ -3,11 +3,12 @@ layout: default
 ---
 
 <main>
-  <section class="content-wrapper wrap">
+  <section class="wrap">
     <h1 class="pagetitle">{{ page.title }}</h1>
+    <h2 class="subtitle">{{ page.subtitle }}</h2>
     <div>{{ content }}</div>
-    {% if page.url == "/contact/" %}
-       {% include contact-form.html %}
-     {% endif %}
+    {% if page.url contains "contact" %}
+      {% include contact-form.html %}
+    {% endif %}
   </section>
 </main>

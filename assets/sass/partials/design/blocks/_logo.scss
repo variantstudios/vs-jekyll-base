@@ -2,10 +2,5 @@
   img {
     display: block;
     margin: 0 auto 0 auto;
-    @include breakpoint($tablet, $no-query:'.no-mq') {
-      width: 368px;
-      height: 124px;
-      padding-top: 14px;
-    }
   }
 }
