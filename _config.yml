@@ -1,46 +1,58 @@
 
 # Site settings
-title:
-email:
-description:
-baseurl:  # the subpath of your site, e.g. /blog/
-url:  # the base hostname & protocol for your site
+title: "Jekyll Base"
+email: "team@variantstudios.com"
+description: "Our base repo for jekyll-based sites"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://example.cloudcannon.net" # the base hostname & protocol for your site
 #timezone: America/Denver - Don't set for CloudCannon...for reasons.
-version: "3.0.3" # the version of jekyll
-author.name:
-author.email:
+version: "3.1.6" # the version of jekyll
+author.name: "Variant Studios"
+author.email: "team@variantstudios.com"
 
 # Gems for plugins
 gems:
   - jekyll-paginate # Needed to add paginate on Jekyll ver 3+
   - jekyll-sitemap # Simple jekyll plugin that creates a sitemap.xml file and you can exclude files by adding 'sitemap:false' to the frontmatter of any file(s).
 
- # Permalinks
-# permalink: /blog/:year-:month-:day/:title - You can set this IF you are NOT using 'jekyll-paginate'
+# Permalinks
 permalink: pretty
 
 # Pagination
 paginate: 10
-# paginate_path: "/blog/page:num/" - set a nice path for paginate
+paginate_path: '/blog/:num/'
 
 #Collections
 collections:
-  # example:
-  #   output: true
-  #   permalink: /example/:title/
+  posts:
+    output: true
+    permalink: '/blog/:title/'
+  authors:
+    output: false
+  categories:
+    output: true
+    permalink: '/blog/:title/'
+  tags:
+    output: true
+    permalink: '/blog/:title/'
 
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+      title:
+      image_path:
+      description:
+      author:
+      category:
+      tags:
 
 # typekit - Because we all need nice type faces.
 typekit:
 
-# Hardcoded Options - Client can't change these option values in CloudCannon
-# option_examples:
-#   - one
-#   - two
-#   - three
-#   - four
-
 # Google Analytics - What site isn't using it?!
-# google_analytics_tracking_id: "UA-XXXXXXXX-XX
+google_analytics_tracking_id: ""
 
 exclude: ["vendor","node_modules","package.json","Gemfile","gulpfile.js","*.scss"]
