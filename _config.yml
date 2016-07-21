@@ -4,7 +4,7 @@ title: "Jekyll Base"
 email: "team@variantstudios.com"
 description: "Our base repo for jekyll-based sites"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://example.cloudcannon.net" # the base hostname & protocol for your site
+url: "http://orchid-lyrebird.cloudvent.net" # the base hostname & protocol for your site
 #timezone: America/Denver - Don't set for CloudCannon...for reasons.
 version: "3.1.6" # the version of jekyll
 author.name: "Variant Studios"
@@ -27,7 +27,7 @@ collections:
   posts:
     output: true
     permalink: '/blog/:title/'
-  authors:
+  team:
     output: false
   categories:
     output: true
@@ -53,6 +53,6 @@ defaults:
 typekit:
 
 # Google Analytics - What site isn't using it?!
-google_analytics_tracking_id: ""
+google_analytics_tracking_id:
 
 exclude: ["vendor","node_modules","package.json","Gemfile","gulpfile.js","*.scss"]
