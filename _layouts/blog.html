@@ -13,7 +13,7 @@ layout: page
       </div>
       <div class="right-blog">
         <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
-        <p>posted {{ post.date | date: "%a, %b %d, %Y" }}{% if post.author %} by {% assign page_author_id = post.author | prepend: "/authors/" %}{% for author in site.authors %}{% if author.id == page_author_id %}{{ author.title }} <img src="{{ author.photo_path }}" alt="{{ author.title }}" class="author">{% break %}{% endif %}{% endfor %}{% endif %}</p>
+        <p>posted {{ post.date | date: "%a, %b %d, %Y" }}{% if post.person %} by {% assign page_person_id = post.person | prepend: "/persons/" %}{% for person in site.persons %}{% if person.id == page_person_id %}{{ person.name }}{% if person.image_path %} <img src="{{ person.image_path }}" alt="{{ person.name }}" class="person">{% endif %}{% break %}{% endif %}{% endfor %}{% endif %}</p>
         {% for cat in post.categories %}
           <p class="category-label">Category: <a href="{{ cat | prepend: '/blog/' | append: '/' }}">{{ cat | replace: '-', ' ' | capitalize }}</a></p>
         {% endfor %}

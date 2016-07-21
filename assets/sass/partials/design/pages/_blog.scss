@@ -6,6 +6,13 @@
     h3 {
       margin-top: 0;
     }
+    .person {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin-bottom: -5px;
+      border: 2px solid $color-one;
+    }
     ul {
       list-style: none;
       padding: 0;
@@ -15,6 +22,7 @@
           background: $color-one;
           padding: 2px 5px;
           border-radius: 3px;
+          font-size: .8rem;
           a, a:visited {
             color: $white;
             text-decoration: none;

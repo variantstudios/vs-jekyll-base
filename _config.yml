@@ -27,7 +27,7 @@ collections:
   posts:
     output: true
     permalink: '/blog/:title/'
-  team:
+  persons:
     output: false
   categories:
     output: true
