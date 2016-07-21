@@ -39,9 +39,9 @@ collections:
 defaults:
   -
     scope:
-      type: "posts"
+      type: posts
     values:
-      layout: "post"
+      layout: post
       title:
       image_path:
       description:
