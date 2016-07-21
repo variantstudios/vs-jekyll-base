@@ -339,7 +339,7 @@ ul.pager li a:visited {
     line-height: 3em;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.3.0/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .menu li {
   display: inline-block;
   line-height: 3em;
@@ -362,7 +362,7 @@ ul.pager li a:visited {
     padding: 0;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.3.0/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .menu li a {
   margin-left: 1.5em;
   padding: 0;
@@ -394,7 +394,7 @@ ul.pager li a:visited {
     max-height: none;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.3.0/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .js .main-nav .menu {
   max-height: none;
 }
@@ -419,7 +419,7 @@ ul.pager li a:visited {
     display: none;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.3.0/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .js .menu-btn {
   display: none;
 }
@@ -431,6 +431,65 @@ ul.pager li a:visited {
 /* line 66, ../sass/partials/design/blocks/_main-navigation.scss */
 .no-js .menu-btn {
   display: none;
+}
+
+/* line 6, ../sass/partials/design/pages/_blog.scss */
+.blog-wrapper .right-blog h3 {
+  margin-top: 0;
+}
+/* line 9, ../sass/partials/design/pages/_blog.scss */
+.blog-wrapper .right-blog ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 12, ../sass/partials/design/pages/_blog.scss */
+.blog-wrapper .right-blog ul li {
+  display: inline-block;
+}
+/* line 14, ../sass/partials/design/pages/_blog.scss */
+.blog-wrapper .right-blog ul li.tag-label {
+  background: #0f7abd;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+/* line 18, ../sass/partials/design/pages/_blog.scss */
+.blog-wrapper .right-blog ul li.tag-label a, .blog-wrapper .right-blog ul li.tag-label a:visited {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+@media (min-width: 50em) {
+  /* line 27, ../sass/partials/design/pages/_blog.scss */
+  .blog-wrapper .left-image {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  /* line 30, ../sass/partials/design/pages/_blog.scss */
+  .blog-wrapper .right-blog {
+    width: 74.46809%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+/* line 27, ../sass/partials/design/pages/_blog.scss */
+.no-mq .blog-wrapper .left-image {
+  width: 23.40426%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+/* line 30, ../sass/partials/design/pages/_blog.scss */
+.no-mq .blog-wrapper .right-blog {
+  width: 74.46809%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
 }
 
 /* line 1, ../sass/partials/design/regions/_footer.scss */
@@ -452,7 +511,7 @@ ul.pager li a:visited {
     clear: none;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.3.0/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .logo {
   width: 33.33333%;
   float: left;
@@ -471,7 +530,7 @@ ul.pager li a:visited {
     clear: none;
   }
 }
-/* line 92, ../../vendor/bundle/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
+/* line 92, ../../../../.rvm/gems/ruby-2.3.0/gems/breakpoint-2.5.0/stylesheets/_breakpoint.scss */
 .no-mq .main-nav {
   width: 65.95745%;
   float: right;
@@ -485,14 +544,14 @@ ul.pager li a:visited {
   max-width: 1200px;
   margin: 0 auto;
 }
-/* line 13, ../../vendor/bundle/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
+/* line 13, ../../../../.rvm/gems/ruby-2.3.0/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
 .wrap:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 13, ../../vendor/bundle/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
+/* line 13, ../../../../.rvm/gems/ruby-2.3.0/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
 main:after {
   content: "";
   display: table;
@@ -524,7 +583,7 @@ html body {
   max-width: 1200px;
   margin: 0 auto;
 }
-/* line 13, ../../vendor/bundle/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
+/* line 13, ../../../../.rvm/gems/ruby-2.3.0/gems/toolkit-2.3.0/stylesheets/toolkit/_clearfix.scss */
 .wrap:after {
   content: "";
   display: table;

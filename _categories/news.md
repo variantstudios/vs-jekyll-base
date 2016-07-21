@@ -1,5 +1,4 @@
 ---
 title: News
+layout: category
 ---
-
-

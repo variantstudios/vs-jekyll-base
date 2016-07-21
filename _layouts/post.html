@@ -3,14 +3,33 @@ layout: default
 ---
 
 <main>
-  <section class="wrap">
-    <header>
-      <h1 class="pagetitle">{{ page.title }}</h1>
-      <p class="post-date">{{ page.date | date: "%b %-d, %Y" }}</p>
-    </header>
-    <article class="post-content">
-      {{ content }}
-    </article>
+  <section class="blog-wrapper wrap">
+    <div class="blog-item clearfix">
+      <p><a href="/blog/">< Back to all blogs</a></p>
+      <div class="left-image">
+        {% if page.image_path %}
+          <img src="{{ page.image_path }}" alt="{{ page.title }}">
+        {% endif %}
+      </div>
+      <div class="right-blog">
+        <a href="{{ post.url }}"><h3>{{ page.title }}</h3></a>
+        <p>posted {{ page.date | date: "%a, %b %d, %Y" }}{% if page.author %} by {% assign page_author_id = page.author | prepend: "/authors/" %}{% for author in site.authors %}{% if author.id == page_author_id %}{{ author.title }} <img src="{{ author.photo_path }}" alt="{{ author.title }}" class="author">{% break %}{% endif %}{% endfor %}{% endif %}</p>
+        {% for cat in page.categories %}
+          <p class="category-label">Category: <a href="{{ cat | prepend: '/blog/' | append: '/' }}">{{ cat | replace: '-', ' ' | capitalize }}</a></p>
+        {% endfor %}
+        {% if page.tags %}
+          <ul class="tags">
+            <li>Tags:</li>
+            {% for tag in page.tags %}
+              <li class="tag-label"><a href="{{ tag | prepend: '/blog/' | append: '/' }}">{{ tag | replace: '-', ' ' | capitalize }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if page.description %}
+          <p>{{ page.description }}</p>
+        {% endif %}
+      </div>
+    </div>
     <nav class="pagination" role="navigation">
       {% if page.previous %}
         <a href="{{ page.previous.url }}" class="" title="{{ page.previous.title }}">Older</a>
