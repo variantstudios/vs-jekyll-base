@@ -9,6 +9,8 @@ layout: default
     <div>{{ content }}</div>
     {% if page.url contains "contact" %}
       {% include contact-form.html %}
+      {% elsif page.url contains "about" %}
+        {% include team.html %}
     {% endif %}
   </section>
 </main>

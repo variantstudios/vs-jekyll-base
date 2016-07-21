@@ -22,18 +22,3 @@ incursu modis missi lunae ad dicta: neganda Delius est. Utque et cadendum erat;
 qui **causas Thisbe terra** sacra esse quae sanguine, decursa sed structa ab
 beatam ut! Moderato fluminis coniungere ambae et certa carinae Macareus, sic et
 ista neque mox ventis regnare coepit.
-
-## Flumina linguam
-
-Hoc motae, dignior, in adsonat terrore quo operum corpore; animusque Cipe
-vidisset ibitis plausu. In sine cape cum lacertis verba attulerat quoniam donec
-prosternit contemnere! Ante nam dura carmina turba. Tanti amplexaque, nomine
-rogati, prolemque Latio principio coniunx herbas Achille surge. Prohibes fallere
-resolutum quaerere talaria.
-
-Perlucentibus ture fameque, pectora non neque percutit caelo tempora additur et
-posset cuius. Homines abiit, tempora tenus addere si famem ridet hic tanti
-maturus ille pascere *efflant* color. Carcere corpora undas; neve iugulum
-suprema tanti, oscula hominis oraque requiescit sorores animasque, nec.
-
-[See our team!](/about/team/)
