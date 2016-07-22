@@ -2,9 +2,12 @@
   @include clearfix;
   max-width: $container_width;
   margin: 0 auto;
+  padding: 0 1em;
 }
 
 
 main {
   @include clearfix;
+  padding: 2em 0;
+
 }

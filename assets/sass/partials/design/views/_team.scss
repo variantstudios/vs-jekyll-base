@@ -1,0 +1,13 @@
+.team-list {
+  .person {
+    padding-bottom: 2em;
+    @include breakpoint($bp-medium, $no-query: ".no-mq") {
+      img {
+        @include grid-span(3, 1);
+      }
+      .info {
+        @include grid-span(9, 4);
+      }
+    }
+  }
+}
