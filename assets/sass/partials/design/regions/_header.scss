@@ -9,3 +9,8 @@
     @include grid-span(8,5);
   }
 }
+
+.header-wrapper  {
+  padding: 1em 0;
+  background: $header-bg;
+}

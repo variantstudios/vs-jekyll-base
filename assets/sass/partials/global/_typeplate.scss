@@ -5,8 +5,8 @@ $mobile-font-size: 100;
 $mobile-font-base: 16 * ($mobile-font-size/100);
 $font-size: 100; // percentage value (16 * 112.5% = 18px)
 $font-base: 17 * ($font-size/100); // converts our percentage to a pixel value
-$font-family: "effra", Helvetica,Arial,Verdana,sans-serif; // Place your body font here, replace fallbacks as needed
-$heading-font-family: "freight-text-pro",serif;; // Place your heading font here, replace fallbacks as needed
+$font-family: serif; // Place your body font here, replace fallbacks as needed
+$heading-font-family: sans-serif; // Place your heading font here, replace fallbacks as needed
 
 // $Paragraphs
 $indent-val: 1.5em;
