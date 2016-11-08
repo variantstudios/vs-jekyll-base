@@ -1,5 +1,5 @@
-source "https://rubygems.org"
-gem 'jekyll', '3.0.3'
+source "http://rubygems.org"
+gem 'jekyll', '3.2.1'
 gem 'toolkit', '2.3.0'
 gem 'singularitygs', '1.4'
 gem 'breakpoint', '2.5.0'

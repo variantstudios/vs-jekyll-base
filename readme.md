@@ -30,7 +30,7 @@ $ git clone git@github.com:variantstudios/vs-jekyll-base
 To compile Jekyll, SASS and run a local server (with browsersync) you'll need to run `$ gulp`
 
 # Site information:
-- Currently we have Jekyll version 3.0.3 to be used locally and also in our CloudCannon site.
+- Currently we have Jekyll version 3.2.1 to be used locally and also in our CloudCannon site.
 - Make sure you replace the following placeholder graphics:
     - /favicon.ico
     - /siteicon.png
