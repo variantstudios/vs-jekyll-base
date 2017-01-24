@@ -40,8 +40,9 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
  */
 gulp.task('browser-sync', ['compass', 'jekyll-build'], function() {
   browserSync({
+    port: 8082,
     server: {
-      baseDir: '_site'
+      baseDir: '_site',
     }
   });
 });
