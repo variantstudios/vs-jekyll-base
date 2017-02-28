@@ -2,24 +2,37 @@
 title: "Jekyll Base"
 email: "team@variantstudios.com"
 description: "Our base repo for jekyll-based sites"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/ - keep empty!
+url: "" # the base hostname & protocol for your site - don't include the forward slash
 #timezone: America/Denver - Don't set for CloudCannon...for reasons.
 version: "3.2.1" # the version of jekyll
-author.name: "Variant Studios"
-author.email: "team@variantstudios.com"
+
+#CloudCannon defaults
+uploads_dir: "assets/images"
+
+
 
 # Gems for plugins
 gems:
-  - jekyll-paginate # Needed to add paginate on Jekyll ver 3+
+  - jekyll-paginate-v2 # Needed to add paginate on Jekyll ver 3+
   - jekyll-sitemap # Simple jekyll plugin that creates a sitemap.xml file and you can exclude files by adding 'sitemap:false' to the frontmatter of any file(s).
 
 # Permalinks
 permalink: pretty
 
-# Pagination
-paginate: 10
-paginate_path: '/blog/:num/'
+# Pagination V2 Settings
+pagination:
+  enabled: true
+  per_page: 8
+  permalink: '/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'title'
+  sort_reverse: false
+  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
+  debug: false
+  # The default document collection to paginate if nothing is specified ('posts' is default)
+  # collection: 'collection_name_goes_here'
 
 #Collections
 collections:
@@ -48,10 +61,13 @@ defaults:
       category:
       tags:
 
+# Cloudinary URL - something like: https://res.cloudinary.com/domain-com/
+cloudinaryurl: ""
+
 # typekit - Because we all need nice type faces.
-typekit:
+typekit: ""
 
 # Google Analytics - What site isn't using it?!
-google_analytics_tracking_id:
+google_analytics_tracking_id: ""
 
 exclude: ["vendor","node_modules","package.json","Gemfile","gulpfile.js","*.scss"]
