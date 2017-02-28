@@ -1,7 +1,7 @@
 # Site settings
 title: "Jekyll Base"
 email: "team@variantstudios.com"
-description: "Our base repo for jekyll-based sites"
+description: "Our base repo for jekyll-based sites that use CloudCannon"
 baseurl: "" # the subpath of your site, e.g. /blog/ - keep empty!
 url: "" # the base hostname & protocol for your site - don't include the forward slash
 #timezone: America/Denver - Don't set for CloudCannon...for reasons.
@@ -20,7 +20,7 @@ gems:
 # Permalinks
 permalink: pretty
 
-# Pagination V2 Settings
+# Pagination V2 Settings: https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
 pagination:
   enabled: true
   per_page: 8
