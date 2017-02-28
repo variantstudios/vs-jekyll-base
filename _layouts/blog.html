@@ -4,7 +4,7 @@ layout: page
 
 <section class="blog-preface">{{ content }}</section>
 <section class="blog-wrapper">
-  {% for post in site.posts %}
+  {% for post in paginator.posts%}
     <div class="blog-item clearfix">
       <div class="left-image">
         {% if post.image_path %}

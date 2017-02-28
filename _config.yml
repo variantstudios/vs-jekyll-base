@@ -23,7 +23,7 @@ permalink: pretty
 # Pagination V2 Settings: https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
 pagination:
   enabled: true
-  per_page: 8
+  per_page: 2
   permalink: '/:num/'
   title: ':title - page :num'
   limit: 0
@@ -32,7 +32,7 @@ pagination:
   # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
   debug: false
   # The default document collection to paginate if nothing is specified ('posts' is default)
-  # collection: 'collection_name_goes_here'
+  #collection: 'posts'
 
 #Collections
 collections:
