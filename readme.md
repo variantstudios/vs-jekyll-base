@@ -41,7 +41,6 @@ To compile Jekyll, SASS and run a local server (with browsersync) you'll need to
  - A '/404.html' file that will show when when a page can not be found. Feel free to customize the content or remove it.
 
 # What's included in this base:
-1. We are using a couple Jekyll Plugins, so if you are using CloudCannon make sure you have checked ' Use Experimental Plugin Building BETA' in your Site Setting panel.
 1. XML Sitemap powered by a jekyll plugin. https://github.com/jekyll/jekyll-sitemap
-2. Jekyll Paginate powered by a jekyll plugin. http://github.com/jekyll/jekyll-paginate
+2. Jekyll Paginate Version 2 powered by a jekyll plugin. https://github.com/sverrirs/jekyll-paginate-v2
 3. An atom.xml for a blog and if you don't have one feel free to remove it.

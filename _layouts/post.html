@@ -28,14 +28,20 @@ layout: default
         <p>{{ content }}</p>
       </div>
     </div>
-    <nav class="pagination" role="navigation">
-      {% if page.previous %}
-        <a href="{{ page.previous.url }}" class="" title="{{ page.previous.title }}">Older</a>
-      {% endif %}
-      {% if page.next %}
-        <a href="{{ page.next.url }}" class="" title="{{ page.next.title }}">Newer</a>
-      {% endif %}
-    </nav><!-- /.pagination -->
+<nav class="pagination" role="navigation">
+    <ul class="pager">
+        {% if page.previous.url %}
+        <li class="previous left">
+            <a class="prev" href="{{page.previous.url}}">&laquo; {{ page.previous.title | truncate: 50 }}</a> {% endif %} {% if page.next.url %}
+        </li>{% endif %} {% if page.next.url %}
+        <li class="next right">
+            <a class="next" href="{{page.next.url}}">{{ page.next.title | truncate: 50 }} &raquo;</a>
+        </li>
+    </ul>
+    {% endif %}
+    </ul>
+</nav>
+<!-- /.pagination -->
     {% include comments.html %}
   </section>
 </main>
