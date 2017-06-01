@@ -1,19 +1,27 @@
-
-<form action="#" method="post" class="contact-form">
+<div class="contact-form">
+<form action="#" method="post">
   <input type="hidden" name="_to" value="team@variantstudios.com">
   <input type="hidden" name="_subject" value="Contact Form">
    <input type="text" name="_gotcha" style="display: none;">
     <div class="webform-component">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required="">
+        <input type="text" name="name" id="name" required="" placeholder="Name">
     </div>
     <div class="webform-component">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required="">
+        <input type="email" name="email" id="email" required="" placeholder="Email">
     </div>
     <div class="webform-component">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6"></textarea>
+        <input type="checkbox" name="option" value="Option 1"><label>Option 1</label>
+        <input type="checkbox" name="option" value="Option 2"><label>Option 2</label>
+        <input type="checkbox" name="option" value="Option 3"><label>Option 3</label>
+        <input type="checkbox" name="option" value="Option 4"><label>Option 4</label>
+    </div>
+    <div class="webform-component">
+        <textarea id="message" name="message" rows="6" placeholder="Message"></textarea>
     </div>
     <input class="sendButton" type="submit" name="Submit" value="Send">
 </form>
+
+<div class="map-embed">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.501129042221!2d-105.09853534875565!3d40.59676585249227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87694a71854a7b05%3A0xdb726baf82c2a83!2sAnimal+House+Rescue+%26+Grooming!5e0!3m2!1sen!2sus!4v1496351965006" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+</div>

@@ -1,69 +1,72 @@
 .menu {
   padding: 0;
   margin: 0;
+  font-family: $heading-font-family;
+  font-size: 1em;
   @include breakpoint($bp-medium, $no-query: '.no-mq') {
-    text-align: right;
+    //text-align: right;
   }
   li {
     list-style: none;
     margin: 0;
     display: block;
-    padding: 0;
+    padding: .5em 0em;
+    position: relative;
     @include breakpoint($bp-medium, $no-query: '.no-mq') {
       display: inline-block;
-      line-height: 3em;
+       padding: .75em 1em;
     }
     a {
-      font-weight: 500;
-      font-size: 1em;
+      font-weight: 700;
       transition: color .5s ease;
-      padding: .75em 1em;
+      padding: 0;
       display: block;
       color: #000;
       text-transform: uppercase;
-      @include breakpoint($bp-medium, $no-query: '.no-mq') {
-        margin-left: 1.5em;
-        padding: 0;
-      }
       &:hover {
         color: $color-one;
       }
       &:active {
-        top: 1px;
         position: relative;
+      }
+    }
+    // Show DropDown Menu
+    &:hover ul {
+      @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        opacity: 1;
+        visibility: visible;
+        margin-top: 12px;
+      }
+    }
+    // DropDown Menu
+    ul {
+      padding: .4em 1em 0;
+      @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        width: 200px;
+        text-align: left;
+        background: $color-one;
+        margin-top: -20px;
+        transition: all .35s ease-in;
+        padding: .3em 0;
+        li {
+          margin: 0;
+          padding:.45em .9em;
+          font-size: 90%;
+          display: block;
+          a {
+            color: #fff;
+            &:hover {
+              color:#fff;
+            }
+          }
+        }
       }
     }
   }
   a, a:visited {
     text-decoration: none;
   }
-}
-.js .main-nav .menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .5s ease;
-  @include breakpoint($bp-medium, $no-query: '.no-mq') {
-    max-height: none;
-  }
-  &.show {
-    max-height: 500px;
-  }
-}
-.js .menu-btn {
-  padding: 1em;
-  background: $color-one;
-  border: none;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.1em;
-  text-align: center;
-  @include breakpoint($bp-medium, $no-query: '.no-mq') {
-    display: none;
-  }
-  img {
-    padding-right: .5em;
-  }
-}
-.no-js .menu-btn {
-  display: none;
 }

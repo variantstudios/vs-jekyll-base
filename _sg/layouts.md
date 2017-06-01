@@ -1,5 +1,5 @@
 ---
-title: Colors
+title: Layout Options
 ---
 
 <div class="cols cols-2 center">

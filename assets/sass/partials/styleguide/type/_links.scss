@@ -17,34 +17,3 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
   }
 }
-
-
-.btn {
-  display: inline-block;
-  margin-right: .5em;
-  margin-bottom: 1em;
-  a {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    @include btn($color-one, #fff, darken($color-one, 10%), 2px, 95%);
-    font-family: $heading-font-family;
-    @include trans(all, linear, .2s);
-    &:hover {
-      background: darken($color-one, 10%);
-      border-color: darken($color-one, 15%);
-    }
-    i {
-      vertical-align: middle;
-      padding-left: .5em;
-    }
-  }
-  &.alt a {
-    @include btn($color-two, #fff, darken($color-two, 10%), 2px, 95%);
-    &:hover {
-      background: darken($color-two, 10%);
-      border-color: darken($color-two, 15%);
-    }
-  }
-}
-

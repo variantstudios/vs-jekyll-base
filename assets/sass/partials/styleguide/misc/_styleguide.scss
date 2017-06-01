@@ -10,6 +10,7 @@
         padding: 1em 2em;
         border-radius: 3px;
         border: 1px solid #ccc;
+        clear: both;
    }
    .sg-label {
         text-transform: uppercase;
@@ -46,5 +47,8 @@
                color: $color-three;
            }
        }
+   }
+   .main-nav, .contact-form {
+      margin-bottom: 2em;
    }
 }
