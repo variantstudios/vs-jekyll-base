@@ -1,0 +1,54 @@
+.styleguide-wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 6em 0;
+}
+.sg-block {
+   padding-bottom: 3em;
+   .highlighter-rouge {
+        background: #f9f9f9;
+        padding: 1em 2em;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        clear: both;
+   }
+   .sg-label {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ccc;
+   }
+   .swatch {
+       display: inline-block;
+       width: 200px;
+       padding: 5em 0 0;
+       margin-right: 1em;
+       span {
+           display: block;
+           background: #fff;
+           padding: 1em 0;
+           font-family: $heading-font-family;
+           font-weight: 700;
+       }
+       &.color-one {
+           background: $color-one;
+           span {
+               color: $color-one;
+           }
+       }
+       &.color-two {
+           background: $color-two;
+           span {
+               color: $color-two;
+           }
+       }
+       &.color-three {
+           background: $color-three;
+           span {
+               color: $color-three;
+           }
+       }
+   }
+   .main-nav, .contact-form {
+      margin-bottom: 2em;
+   }
+}

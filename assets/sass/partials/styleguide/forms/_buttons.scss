@@ -1,13 +1,47 @@
 input[type="submit"] {
-  @include btn(#999, #fff, #6286BD, 3px, $normal);
-  font-family: $heading-font-family;
-	display: inline-block;
-	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.20), inset 0px 2px 0px 0px #FFFFFF;
-	border-radius: 3px;
-	padding: 10px 25px;
-	font-weight: bold;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.20);
-	font-size: .8em;
-	color: #373737;
-	cursor: pointer;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    @include btn($color-one, #fff, darken($color-one, 10%), 2px, 95%);
+    font-family: $heading-font-family;
+    @include trans(all, linear, .2s);
+		cursor: pointer;
+    width: 100%;
+    padding: 1em;
+    font-weight: 700;
+    &:hover {
+      background: darken($color-one, 10%);
+      border-color: darken($color-one, 15%);
+    }
 }
+
+
+.btn {
+  display: inline-block;
+  margin-right: .5em;
+  margin-bottom: 1em;
+  a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    @include btn($color-one, #fff, darken($color-one, 10%), 2px, 95%);
+    font-family: $heading-font-family;
+    @include trans(all, linear, .2s);
+    &:hover {
+      background: darken($color-one, 10%);
+      border-color: darken($color-one, 15%);
+    }
+    i {
+      vertical-align: middle;
+      padding-left: .5em;
+    }
+  }
+  &.alt a {
+    @include btn($color-two, #fff, darken($color-two, 10%), 2px, 95%);
+    &:hover {
+      background: darken($color-two, 10%);
+      border-color: darken($color-two, 15%);
+    }
+  }
+}
+

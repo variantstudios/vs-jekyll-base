@@ -2,6 +2,13 @@
   url: /about/
 - text: Services
   url: /services/
+  subitems:
+    - text: Service Item 1
+      url: /#/
+    - text: Service Item 2
+      url: /#/
+    - text: Service Item 3
+      url: /#/
 - text: Blog
   url: /blog/
 - text: Contact

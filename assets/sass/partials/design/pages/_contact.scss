@@ -1,0 +1,13 @@
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    form {
+        width: 50%;
+        padding: 2em;
+    }
+    .map-embed {
+        width: 50%;
+    }
+}

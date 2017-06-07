@@ -8,25 +8,12 @@ a {
   }
 }
 
+a.read-more-link {
+    font-weight: 700;
+}
+
 h1, h2, h3, h4, h5, h6 {
   a {
     text-decoration: none;
-  }
-}
-
-
-div.btn {
-  display: inline-block;
-  a {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    @include btn($color-one, #fff, darken($color-one, 5%), 2px, 95%);
-    font-family: $heading-font-family;
-    @include trans(all, linear, .2s);
-    &:hover {
-      margin-top: -0.15em;
-      margin: -0.15em 0 0.15em;
-    }
   }
 }

@@ -1,0 +1,37 @@
+.cols {
+  @include breakpoint($bp-medium, $no-query: ".no-mq") {
+    display: flex;
+    justify-content: space-between;
+  }
+  .col {
+      margin: 2em 0;
+  }
+}
+.cols-2 {
+    .col {
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+          width: 45%;
+        }
+    }
+}
+
+.cols-3 {
+    .col {
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+          width: 30%;
+        }
+    }
+}
+.cols-4 {
+    .col {
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+          width: 22%;
+        }
+    }
+}
+
+.center {
+    .col {
+        text-align: center;
+    }
+}
