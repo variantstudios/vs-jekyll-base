@@ -16,7 +16,9 @@
     "url": "https://github.com/variantstudios/vs-jekyll-base/issues"
   },
   "homepage": "https://github.com/variantstudios/vs-jekyll-base#readme",
-  "dependencies": {},
+  "dependencies": {
+    "sass-convert": "^0.5.2"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "es6-promise": "^4.1.0",
