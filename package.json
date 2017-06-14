@@ -1,6 +1,6 @@
 {
-  "name": "vs--jekyll-base",
-  "version": "1.0.0",
+  "name": "vs-jekyll-base",
+  "version": "1.0.1",
   "description": "Variant Studios 2017 new Jekyll base setup",
   "main": "gulpfile.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/variantstudios/variantstudios.com-2017.git"
+    "url": "git+https://github.com/variantstudios/vs-jekyll-base.git"
   },
   "author": "Brent Robbins",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/variantstudios/variantstudios.com-2017/issues"
+    "url": "https://github.com/variantstudios/vs-jekyll-base/issues"
   },
-  "homepage": "https://github.com/variantstudios/variantstudios.com-2017#readme",
+  "homepage": "https://github.com/variantstudios/vs-jekyll-base#readme",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.12",
