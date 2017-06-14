@@ -77,4 +77,4 @@ typekit: ""
 # Google Analytics - What site isn't using it?!
 google_analytics_tracking_id: ""
 
-exclude: ["vendor","node_modules","package.json","Gemfile","gulpfile.js","*.scss"]
+exclude: ["readme.md", "vendor","node_modules","package.json", "package-lock.json","Gemfile","gulpfile.js","*.scss"]
