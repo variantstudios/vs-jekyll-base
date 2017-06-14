@@ -21,25 +21,39 @@ var messages = {
 /**
  * Build the Jekyll Site
  */
-gulp.task('jekyll-build', function(done) {
-  browserSync.notify(messages.jekyllBuild);
+gulp.task('jekyll-build', function (done) {
+  //browserSync.notify(messages.jekyllBuild);
   return cp.spawn('jekyll', ['build'], {
-      stdio: 'inherit'
-    }).on('close', done);
+    stdio: 'inherit'
+  }).on('close', done);
 });
 
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
   browserSync.reload();
 });
 
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['compass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['compass', 'jekyll-build'], function () {
   browserSync({
+    notify: {
+        styles: [
+            'display: none; ',
+            'padding: 6px 15px 3px;',
+            'position: fixed;',
+            'font-size: 0.8em;',
+            'z-index: 9999;',
+            'left: 0px;',
+            'bottom: 0px;',
+            'color: rgb(74, 74, 74);',
+            'background-color: rgb(17, 17, 17);',
+            'color: rgb(229, 229, 229);'
+        ]
+    },
     server: {
       baseDir: '_site'
     }
@@ -51,7 +65,7 @@ gulp.task('browser-sync', ['compass', 'jekyll-build'], function() {
  */
 
 
-gulp.task('sass-deploy', function() {
+gulp.task('sass-deploy', function () {
   gulp.src('assets/css/**/*.scss')
     .pipe(sass({
       includePaths: ['assets/css'],
@@ -70,15 +84,14 @@ gulp.task('sass-deploy', function() {
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch('assets/sass/**', ['compass']);
   gulp.watch('assets/js/dev/**', ['scripts']);
-  gulp.watch(['**.md', '**.html', '_layouts/**.html', '_includes/**.html', '_data/**', 'pages/**', 'assets/**.csv', 'assets/images/**', 'projects/**','_sg/**'], ['jekyll-rebuild']);
+  gulp.watch(['**.md', '**.html', '_layouts/**.html', '_includes/**.html', '_data/**', 'pages/**', 'assets/**.csv', 'assets/images/**', 'projects/**'], ['jekyll-rebuild']);
 });
 
-// Compile Compass/sass
-
-gulp.task('compass', function() {
+// Compile Compass/SASS and Auto Prefix
+gulp.task('compass', function () {
   gulp.src('assets/sass/**.scss')
     .pipe(plumber())
     .pipe(compass({
@@ -98,17 +111,16 @@ gulp.task('compass', function() {
     .pipe(gulp.dest('_site/assets/css'));
 });
 
- 
-gulp.task('minify-css', function() {
+// Minify CSS, Clean and Other Things
+gulp.task('minify-css', function () {
   return gulp.src('/assets/css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(gulp.dest('dist'));
 });
 
 
 // JS Script Tasks
-
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   gulp.src('assets/js/dev/**.js')
     .pipe(plumber())
     .pipe(uglify())

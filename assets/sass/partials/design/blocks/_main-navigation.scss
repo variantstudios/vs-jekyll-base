@@ -4,7 +4,7 @@
   font-family: $heading-font-family;
   font-size: 1em;
   @include breakpoint($bp-medium, $no-query: '.no-mq') {
-    //text-align: right;
+    text-align: right;
   }
   li {
     list-style: none;

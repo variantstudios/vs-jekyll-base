@@ -60,7 +60,7 @@ $bp-xlarge: $container_width;
 
 $no-query: $bp-medium, 'no-query' '.no-mq';
 
-$breakpoint-no-query-fallbacks: true;
-$breakpoint-to-ems: true;
+@include breakpoint-set('no query fallbacks', true);
+@include breakpoint-set('to ems', true);
 $breakpoints: '';
 

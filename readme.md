@@ -3,13 +3,9 @@ This is a base setup for Jekyll powered static generated websites. Some of the f
 
 # Get your local environment setup on OSX
 
-## Install Homebrew
+## Install and use the newer version of Node
 
-`$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-
-## Install Node 0.10 (which includes npm)
-
-`$ brew install node010`
+ - Node.js v8.0.0 and v6.9.1 has been tested and works fine.
 
 # Setup the site
 
