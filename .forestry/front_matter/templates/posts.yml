@@ -1,0 +1,62 @@
+---
+pages:
+- _posts/2017-01-21-test-post-2017.md
+- _posts/2016-07-21-test-post-2016.md
+- _posts/2015-07-20-test-post-2015.md
+hide_body: false
+fields:
+- name: title
+  default: Test post 2
+  label: Title
+  type: text
+  hidden: false
+- name: date
+  default: 2015-07-21 00:00:00 +0000
+  label: Date
+  type: datetime
+  hidden: false
+- name: layout
+  default: post
+  label: Layout
+  type: text
+  hidden: false
+- name: image_path
+  default: "/assets/images/blog/blog2.jpg"
+  label: Image path
+  type: file
+  hidden: false
+- name: description
+  default: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+    et quasi architecto beatae vitae dicta sunt explicabo.
+  label: Description
+  type: textarea
+  hidden: false
+- name: person
+  default: brent-robbins
+  label: Person
+  type: text
+  hidden: false
+- name: tags
+  default:
+  - instructions
+  - developer
+  label: Tags
+  type: list
+  hidden: false
+- name: categories
+  default:
+  - news
+  label: Categories
+  type: list
+  hidden: false
+- name: author
+  default: 
+  label: Author
+  type: text
+  hidden: false
+- name: category
+  default: 
+  label: Category
+  type: text
+  hidden: false
