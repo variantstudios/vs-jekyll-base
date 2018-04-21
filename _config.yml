@@ -5,48 +5,56 @@ description: "Our base repo for jekyll-based sites that use CloudCannon"
 baseurl: "" # the subpath of your site, e.g. /blog/ - keep empty!
 url: "" # the base hostname & protocol for your site - don't include the forward slash
 #timezone: America/Denver - Don't set for CloudCannon...for reasons.
-version: "3.2.1" # the version of jekyll
+version: "3.7.1" # the version of jekyll
 
 #CloudCannon defaults
 uploads_dir: "assets/images"
 
-
-
 # Gems for plugins
-gems:
+plugins:
   - jekyll-paginate-v2 # Needed to add paginate on Jekyll ver 3+
   - jekyll-sitemap # Simple jekyll plugin that creates a sitemap.xml file and you can exclude files by adding 'sitemap:false' to the frontmatter of any file(s).
-
-# Permalinks
-permalink: pretty
+  - jekyll-include-cache # Cache jekyll includes to improve build times
 
 # Pagination V2 Settings: https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
 pagination:
   enabled: true
   per_page: 2
-  permalink: '/:num/'
+  #permalink: '/blog/:num/'
   title: ':title - page :num'
   limit: 0
   sort_field: 'title'
-  sort_reverse: false
+  #sort_reverse: false
   # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
-  debug: false
-  # The default document collection to paginate if nothing is specified ('posts' is default)
-  #collection: 'posts'
+  debug: true
+  # The default document collection to paginate if nothing is specified ('news' is default)
+  collection: 'posts'
+
+# Permalinks
+permalink: pretty
+
+# Compress HTML
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: true
+  startings: [html, head, body]
 
 #Collections
 collections:
   posts:
     output: true
     permalink: '/blog/:title/'
-  people:
-    output: false
   categories:
     output: true
-    permalink: '/blog/:title/'
+    permalink: '/blog/category/:title/'
   tags:
     output: true
-    permalink: '/blog/:title/'
+    permalink: '/blog/tag/:title/'
   sg:
     output: false
 
@@ -55,26 +63,45 @@ defaults:
     scope:
       type: posts
     values:
-      layout: post
-      title:
-      image_path:
-      description:
-      author:
-      category:
-      tags:
+      _options:
+        image_path: # Front matter field
+          uploads_dir: "assets/images/posts/"
   -
     scope:
       type: sg
     values:
       layout: styleguide-block
 
-# Cloudinary URL - something like: https://res.cloudinary.com/domain-com/
-cloudinaryurl: ""
+# Cloudcannon Options
+_options:
+  share_image_path:
+    width: 1200
+    height: 1200
+    resize_style: "contain"
+    mime_type: "image/jpeg"
+    expandable: false
+    uploads_dir: "assets/images/share"
+_comments:
+  share_image_path: "The social share image needs to be at least 1200x1200px and if not that exact same size CloudCannon will scale and crop it to 1200x1200."
 
-# typekit - Because we all need nice type faces.
-typekit: ""
+# Google Analytics 
+google_analytics_tracking_id:
 
-# Google Analytics - What site isn't using it?!
-google_analytics_tracking_id: ""
-
-exclude: ["readme.md", "vendor","node_modules","package.json", "package-lock.json","Gemfile","gulpfile.js","*.scss"]
+exclude: [
+  "collections",
+  "siteicon.png",
+  "npm-debug.log",
+  "Gemfile",
+  "Gemfile.lock",
+  "README.md",
+  "assets/**/*.md",
+  "gulpfile.js",
+  "node_modules",
+  "npm-shrinkwrap.json",
+  "package-lock.json",
+  "package.json",
+  "proofScripts.js",
+  "*.map",
+  "*.scss",
+  "assets/js/dev"
+  ]

@@ -1,47 +1,48 @@
----
-layout: default
+--- 
+layout: default 
 ---
 
-<main>
-  <section class="blog-wrapper wrap">
+<section class="blog-wrapper wrap">
     <div class="blog-item clearfix">
-      <p><a href="/blog/">< Back to all blogs</a></p>
-      <div class="left-image">
-        {% if page.image_path %}
-          <img src="{{ page.image_path }}" alt="{{ page.title }}">
-        {% endif %}
-      </div>
-      <div class="right-blog">
-        <a href="{{ post.url }}"><h3>{{ page.title }}</h3></a>
-        <p>posted {{ page.date | date: "%a, %b %d, %Y" }}{% if page.person %} by {% assign page_person_id = page.person | prepend: "/people/" %}{% for person in site.people %}{% if person.id == page_person_id %}{{ person.name }}{% if person.image_path %} <img src="{{ person.image_path }}" alt="{{ person.name }}" class="person">{% endif %}{% break %}{% endif %}{% endfor %}{% endif %}</p>
-        {% for cat in page.categories %}
-          <p class="category-label">Category: <a href="{{ cat | prepend: '/blog/' | append: '/' }}">{{ cat | replace: '-', ' ' | capitalize }}</a></p>
-        {% endfor %}
-        {% if page.tags %}
-          <ul class="tags">
-            <li>Tags:</li>
-            {% for tag in page.tags %}
-              <li class="tag-label"><a href="{{ tag | prepend: '/blog/' | append: '/' }}">{{ tag | replace: '-', ' ' | capitalize }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-        <p>{{ content }}</p>
-      </div>
+        <p>
+            <a href="/blog/">
+                < Back to all blogs</a>
+        </p>
+        <div class="left-image">
+            {% if page.image_path %}
+            <img src="{{ page.image_path }}" alt="{{ page.title }}"> {% endif %}
+        </div>
+        <div class="right-blog">
+            <a href="{{ post.url }}">
+                <h3>{{ page.title }}</h3>
+            </a>
+            <p>posted {{ page.date | date: "%a, %b %d, %Y" }}</p>
+            {% for cat in page.categories %}
+            <p class="category-label">Category: <a href="{{ cat | prepend: '/blog/category/' | append: '/' }}">{{ cat | replace: '-', ' ' | capitalize }}</a></p>
+            {% endfor %} {% if page.tags %}
+            <ul class="tags">
+                <li>Tags:</li>
+                {% for tag in page.tags %}
+                <li class="tag-label"><a href="{{ tag | prepend: '/blog/tag/' | append: '/' }}">{{ tag | replace: '-', ' ' | capitalize }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {{ content }}
+        </div>
     </div>
-<nav class="pagination" role="navigation">
-    <ul class="pager">
-        {% if page.previous.url %}
-        <li class="previous left">
-            <a class="prev" href="{{page.previous.url}}">&laquo; {{ page.previous.title | truncate: 50 }}</a> {% endif %} {% if page.next.url %}
-        </li>{% endif %} {% if page.next.url %}
-        <li class="next right">
-            <a class="next" href="{{page.next.url}}">{{ page.next.title | truncate: 50 }} &raquo;</a>
-        </li>
-    </ul>
-    {% endif %}
-    </ul>
-</nav>
-<!-- /.pagination -->
+    <nav class="pagination" role="navigation">
+        <ul class="pager">
+            {% if page.previous.url %}
+            <li class="previous left">
+                <a class="prev" href="{{page.previous.url}}">&laquo; {{ page.previous.title | truncate: 50 }}</a> {% endif %} {% if page.next.url %}
+            </li>{% endif %} {% if page.next.url %}
+            <li class="next right">
+                <a class="next" href="{{page.next.url}}">{{ page.next.title | truncate: 50 }} &raquo;</a>
+            </li>
+        </ul>
+        {% endif %}
+        </ul>
+    </nav>
+    <!-- /.pagination -->
     {% include comments.html %}
-  </section>
-</main>
+</section>

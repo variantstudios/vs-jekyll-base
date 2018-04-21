@@ -1,25 +1,27 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
-{% include head.html %}
-<body>
-	{% include browserupgrade.html %}
-
+<!--[if lt IE 8]>      <html class="no-js lt-ie9 lt-ie8 ie7" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8" lang=""> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9" lang=""> <![endif]-->
+<!--[if gt IE 9]> <html class="no-js ie9+" lang=""> <![endif]-->
+{% include head.html page_title=page.search_engine_optimization.page_title page_description=page.search_engine_optimization.page_description share_image_path=page.search_engine_optimization.share_image_path url=page.url layout=page.layout %}
+<body class=" {% if page.is_post %}post{% endif %} {{ page.url | slugify }} {% if page.body_class %}{{page.body_class}}{% endif %} {% if layout.body_class %}{{layout.body_class}}{% endif %}">
+  {% comment %}{% include_cached browserupgrade.html %}{% endcomment %}
   <div class="header-wrapper clearfix">
-	  {% include header.html %}
+    {% include_cached header.html group=page.group url=page.url %}
   </div>
-
+  {% if page.layout != 'front' %}
   <div class="main-wrapper clearfix">
-	  {{ content }}
+    {{ content }}
   </div>
-  
+  {% else %}
+    {{ content }}
+  {% endif %}
   <div class="footer-wrapper clearfix">
-  	{% include footer.html %}
+    {% include_cached footer.html %}
   </div>
-
-	{% include scripts.html %}
+  {% include_cached scripts.html layout=page.layout google_analytics_tracking_id=site.google_analytics_tracking_id %}
 </body>
-
 </html>

@@ -1,58 +1,53 @@
----
-layout: page
+--- 
+search_engine_optimization:
+  page_title: 
+  page_description:
+  share_image_path:
+layout: page 
 ---
 
 <section class="blog-preface">{{ content }}</section>
+
 <section class="blog-wrapper">
-  {% for post in paginator.posts%}
+    {% for post in paginator.posts %}
     <div class="blog-item clearfix">
-      <div class="left-image">
-        {% if post.image_path %}
-          <a href="{{ post.url }}"><img src="{{ post.image_path }}" alt="{{ post.title }}"></a>
-        {% endif %}
-      </div>
-      <div class="right-blog">
-        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
-        <p>posted {{ post.date | date: "%a, %b %d, %Y" }}{% if post.person %} by {% assign page_person_id = post.person | prepend: "/people/" %}{% for person in site.people %}{% if person.id == page_person_id %}{{ person.name }}{% if person.image_path %} <img src="{{ person.image_path }}" alt="{{ person.name }}" class="person">{% endif %}{% break %}{% endif %}{% endfor %}{% endif %}</p>
-        {% for cat in post.categories %}
-          <p class="category-label">Category: <a href="{{ cat | prepend: '/blog/' | append: '/' }}">{{ cat | replace: '-', ' ' | capitalize }}</a></p>
-        {% endfor %}
-        {% if post.tags %}
-          <ul class="tags">
-            <li>Tags:</li>
-            {% for tag in post.tags %}
-              <li class="tag-label"><a href="{{ tag | prepend: '/blog/' | append: '/' }}">{{ tag | replace: '-', ' ' | capitalize }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-        {% if post.description %}
-          <p>{{ post.description }}</p>
-        {% endif %}
-      </div>
+        <div class="left-image">
+            {% if post.image_path %}
+            <a href="{{ post.url }}"><img src="{{ post.image_path }}" alt="{{ post.title }}"></a>
+            {% endif %}
+        </div>
+        <div class="right-blog">
+            <a href="{{ post.url }}">
+                <h3>{{ post.title }}</h3>
+            </a>
+            <p>posted {{ post.date | date: "%a, %b %d, %Y" }}{% if post.person %} by {% assign page_person_id = post.person | prepend: "/people/" %}{% for person in site.people %}{% if person.id == page_person_id %}{{ person.name }}{% if person.image_path
+                %} <img src="{{ person.image_path }}" alt="{{ person.name }}" class="person">{% endif %}{% break %}{% endif %}{% endfor %}{% endif %}</p>
+            {% for cat in post.categories %}
+            <p class="category-label">Category: <a href="{{ cat | prepend: '/blog/category/' | append: '/' }}">{{ cat | replace: '-', ' ' | capitalize }}</a></p>
+            {% endfor %} {% if post.tags %}
+            <ul class="tags">
+                <li>Tags:</li>
+                {% for tag in post.tags %}
+                <li class="tag-label"><a href="{{ tag | prepend: '/blog/tag/' | append: '/' }}">{{ tag | replace: '-', ' ' | capitalize }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %} {% if post.description %}
+            <p>{{ post.description }}</p>
+            {% endif %}
+        </div>
     </div>
-  {% endfor %}
-  <!-- Pagination links -->
-  {% if paginator.total_pages > 1 %}
+    {% endfor %}
+    <!-- Pagination links -->
+    {% if paginator.total_pages > 1 %}
     <div class="pagination">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-      {% else %}
-        <span>&laquo; Prev</span>
-      {% endif %}
-      {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-          <em>{{ page }}</em>
-        {% elsif page == 1 %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-        {% else %}
-          <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-        {% endif %}
-      {% endfor %}
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-      {% else %}
-        <span>Next &raquo;</span>
-      {% endif %}
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a> {% else %}
+        <span>&laquo; Prev</span> {% endif %} {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
+        <em>{{ page }}</em> {% elsif page == 1 %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a> {% else %}
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a> {% endif %} {% endfor %} {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a> {% else %}
+        <span>Next &raquo;</span> {% endif %}
     </div>
-  {% endif %}
+    {% endif %}
 </section>
