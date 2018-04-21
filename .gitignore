@@ -3,6 +3,6 @@ _site
 Gemfile.lock
 package-lock.json
 .jekyll-metadata
-/vendor
 .bundle
 node_modules
+*.DS_Store

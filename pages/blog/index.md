@@ -1,7 +1,10 @@
 ---
 title: Blog
+search_engine_optimization:
+  page_title: 
+  page_description:
+  share_image_path:
 permalink: "/blog/"
-description: This is just a sample blog.
 layout: blog
 pagination:
   enabled: true

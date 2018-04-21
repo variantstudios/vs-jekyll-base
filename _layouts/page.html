@@ -2,15 +2,13 @@
 layout: default
 ---
 
-<main>
-  <section class="wrap">
-    <h1 class="pagetitle">{{ page.title }}</h1>
-    <h2 class="subtitle">{{ page.subtitle }}</h2>
-    <div>{{ content }}</div>
-    {% if page.url contains "contact" %}
-      {% include contact-form.html %}
-      {% elsif page.url contains "about" %}
-        {% include team.html %}
-    {% endif %}
-  </section>
-</main>
+<section class="wrap">
+  <h1 class="pagetitle">{{ page.title }}</h1>
+  <h2 class="subtitle">{{ page.subtitle }}</h2>
+  <div>{{ content }}</div>
+  {% if page.url contains "contact" %}
+    {% include contact-form.html %}
+    {% elsif page.url contains "about" %}
+      {% comment %} {% include team.html %} {% endcomment %}
+  {% endif %}
+</section>

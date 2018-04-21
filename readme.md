@@ -1,19 +1,63 @@
-# Jekyll Base
-This is a base setup for Jekyll powered static generated websites. Some of the features included are specific for the CloudCannon CMS.
+# Jekyll / CloudCannon Base
 
-# Get your local environment setup on OSX
+# Setup OS with correct versions of Node and Ruby
 
-## Install and use the newer version of Node
+## Developed/Tested using:
 
- - Node.js v8.0.0 and v6.9.1 has been tested and works fine.
+* Ruby v2.3.0
+  > See [`.ruby-version`](.ruby-version) to confirm required version
+* Node v6.12.1
+  > * See [`.nvmrc`](.nvmrc) to confirm required version
+  > * Also see, the following configurations which should agree with [`.nvmrc`](.nvmrc)
+  >   * [`appveyor.yml`](appveyor.yml) for `nodejs_version` environment variable
+  >   * [`package.json`](package.json) for `engines.node` property value
+
+## Setup of software on your OS
+
+Managing multiple versions of ruby and node for different projects can be a pain without a version
+manager. This project is configured to work with `rvm` and `nvm`.
+
+> More Info:
+>
+> * Ruby Version Management
+>   * On Windows, try: [uru](https://bitbucket.org/jonforums/uru)
+      * Could also try: [Pik: Ruby version manager - chocolatey install](https://chocolatey.org/packages/pik), however
+        [pik: Ruby version manager is no longer maintained](https://github.com/vertiginous/pik#no-longer-maintained)
+>   * On Unix-y platforms, try: [RVM: Ruby Version Manager](https://rvm.io/)
+>
+> * Node Version Management
+>   * On Window, try [nvm\-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows)
+>   * On Unix-y platforms, try: [nvm](https://github.com/creationix/nvm)
+
+Before continuing with **Install**, make sure you are using correct version of ruby and node.
+
+If using `nvm and `rvm`, you can install with:
+
+```bash
+rvm install "ruby-2.3.0"
+nvm install 6.12.1
+```
+
+And you can switch to these versions after `cd`ing into this directory using
+
+```bash
+rvm use
+nvm use
+```
+
+Regardless if you are using a version manager and which version you are using, verify versions you have
+with these commands:
+
+```bash
+ruby --version
+node --version
+```
+
+Finally verify `bundle` command is installed with command: `which bundle` and if
+this command returns no result, install it with `gem install bundler`.  You can
+check the version installed with the command `bundle --version`.
 
 # Setup the site
-
-## Clone the repo
-
-$ git clone git@github.com:variantstudios/vs-jekyll-base
-
-## Setup the site
 
 ### Install the Ruby Gems
 `$ bundle install`
@@ -21,12 +65,25 @@ $ git clone git@github.com:variantstudios/vs-jekyll-base
 ### Install the Node packages
 `$ npm install`
 
+
+## Tests
+
+Run `npm test` to run tests for website. These tests must pass and will be
+validated by CI tool during pull request review. Any errors will block merging a
+pull request.
+
+Tests include:
+* eslint rules for javascript
+* markdown proof rules
+
 ## Compile
 
-To compile Jekyll, SASS and run a local server (with browsersync) you'll need to run `$ gulp`
+To compile Jekyll, SASS and run a local server (with browsersync) you'll need to run `$ npm start` and the site should open in your browser at the following address: http://localhost:3000.
+
+To just build the site run `npm run build`.
 
 # Site information:
-- Currently we have Jekyll version 3.2.1 to be used locally and also in our CloudCannon site.
+- Currently we have Jekyll version 3.7.1 to be used locally and also in our CloudCannon site.
 - Make sure you replace the following placeholder graphics:
     - /favicon.ico
     - /siteicon.png

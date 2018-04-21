@@ -1,13 +1,51 @@
-.contact-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fafafa;
-    form {
-        width: 50%;
-        padding: 2em;
+// -- FORMS
+form {
+    .form-super-group {
+        @include clearfix;
+        margin-top: .5rem;
     }
-    .map-embed {
-        width: 50%;
+    .form-group {
+        margin-top: .5rem;
+    }
+    .left {
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+            @include grid-span(6, 1, $gutter: 1);
+        }
+    }
+    .right {
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+            @include grid-span(6, 7, $gutter: 1);
+        }
+    }
+    label {
+        text-transform: uppercase;
+        color: #262626;
+        font-weight: 600;
+        font-size: .9rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="name"],
+    input[type="password"],
+    input[type="file"],
+    textarea {
+        border-left: 2px solid #E8EBED !important;
+        border-top: 2px solid #E8EBED !important;
+        border-right: 2px solid #E8EBED !important;
+        border-bottom: 2px solid #E8EBED !important;
+        color: $body-copy-color;
+    }
+    textarea {
+        resize: none;
+        margin-bottom: 1rem;
+    }
+    .required {
+        color: #262626;
+        font-weight: 600;
+        font-size: .8rem;
+        padding: 0;
+    }
+    .align-right {
+        text-align: right;
     }
 }

@@ -1,14 +1,15 @@
 textarea {
-  width: 100%;
-  box-sizing: border-box;
-  padding:  1em 1.25em;
-  font-size: 100%;
-  border: 1px solid #D3D3D3;
-  border-radius: 0;
-  font-family: $heading-font-family;
-  &:active, &:focus {
-    background: #fafafa;
-    box-shadow: none;
-    outline: none;
-  }
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em 1.25em;
+    font-size: 100%;
+    border: 1px solid #D3D3D3;
+    border-radius: 0;
+    font-family: $heading-font-family;
+    &:active,
+    &:focus {
+        background: #fafafa;
+        box-shadow: none;
+        outline: none;
+    }
 }

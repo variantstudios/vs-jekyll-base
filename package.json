@@ -1,34 +1,53 @@
 {
-  "name": "vs-jekyll-base",
-  "version": "1.0.1",
-  "description": "Variant Studios 2017 new Jekyll base setup",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/variantstudios/vs-jekyll-base.git"
-  },
-  "author": "Brent Robbins",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/variantstudios/vs-jekyll-base/issues"
-  },
-  "homepage": "https://github.com/variantstudios/vs-jekyll-base#readme",
-  "dependencies": {
-    "sass-convert": "^0.5.2"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "es6-promise": "^4.1.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.4.1",
-    "gulp-compass": "^2.1.0",
-    "gulp-gzip": "^1.4.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0"
-  }
+    "name": "vs-jekyll-base",
+    "version": "1.0.0",
+    "description": "Jekyll / CloudCannon Base",
+    "author": "Brent Robbins",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/variantstudios/vs-jekyll-base.git"
+    },
+    "homepage": "https://github.com/variantstudios/vs-jekyll-base",
+    "engines": {
+        "node": "~6.12.1",
+        "npm": "~3.10.10"
+    },
+    "scripts": {
+        "build": "gulp build",
+        "eslint:all": "npm run eslint:assets && npm run eslint:buildScripts",
+        "eslint:assets": "eslint -c ./assets/js/dev/.eslintrc.js --ignore-path .eslintignore ./assets/js/dev",
+        "eslint:buildScripts": "eslint -c ./.eslintrc.js --ignore-path .eslintignore ./*.js",
+        "gulp": "gulp",
+        "proof": "markdown-proofing --color --no-throw --",
+        "proof:all": "markdown-proofing --color **/*.md",
+        "proof:changed": "node proofScripts.js git-index-and-uncommitted **/*.md",
+        "proof:index": "node proofScripts.js git-index **/*.md",
+        "proof:latest": "node proofScripts.js latest **/*.md",
+        "proof:uncommitted": "node proofScripts.js git-uncommitted **/*.md",
+        "start": "gulp",
+        "test": "npm run eslint:all",
+        "which:gulp": "which gulp"
+    },
+    "dependencies": {
+        "html5shiv": "^3.7.3",
+        "modernizr": "^3.6.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.23.6",
+        "eslint": "^4.19.0",
+        "express": "^4.16.3",
+        "graceful-fs": "^4.1.11",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^5.0.0",
+        "gulp-clean-css": "^3.9.3",
+        "gulp-cli": "^2.0.1",
+        "gulp-compass": "^2.1.0",
+        "gulp-gzip": "^1.4.2",
+        "gulp-plumber": "^1.2.0",
+        "gulp-uglify": "^3.0.0",
+        "https": "^1.0.0",
+        "markdown-proofing": "^1.0.2",
+        "path": "^0.12.7",
+        "shelljs": "^0.8.1"
+    }
 }
